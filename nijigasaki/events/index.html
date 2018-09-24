@@ -45,7 +45,7 @@
 
 		            <div class="navbar-collapse collapse" id="navbar">
 		                <ul class="nav navbar-nav">
-<li ><a href="https://lovelive.ganbaru.by/"><span class="nav-label"><i class="fa fa-home"></i>Home</span></a></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file"></i>µ's<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/muse/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/muse/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file"></i>Nijigasaki<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/nijigasaki/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/nijigasaki/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-file"></i>Aqours<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/aqours/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/aqours/events">Events</a></li></ul></li></li>
+<li ><a href="https://lovelive.ganbaru.by/"><span class="nav-label"><i class="fa fa-home"></i>Home</span></a></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>µ's<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/muse/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/muse/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>Nijigasaki<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/nijigasaki/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/nijigasaki/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>Aqours<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/aqours/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/aqours/events">Events</a></li></ul></li></li>
 		                </ul>
 		                <ul class="nav navbar-top-links navbar-right">
 
@@ -68,7 +68,7 @@
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><input type="text" class="form-control input-sm m-b-xs" id="table0_filter" placeholder="Search in table" /><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filter="#table0_filter" data-page-size="20"><thead><th>Event Name</th><th data-hide="all">Dates</th></thead></table><ul class="pagination" /></div></div>
+			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="20"><thead><th>Date</th><th>Event Name</th><th>Venue</th></thead></table><ul class="pagination" /></div></div>
 		</div>
 
 	</div>
@@ -98,11 +98,20 @@
     <script src='../../js/plugins/pace/pace.min.js'></script>
 
     <script>
-		$('#table0').footable();
+		$('#table0').footable({
+			paging: {
+				size: 20
+			}
+		});
+		$('#table0').append(this.html).trigger('footable_redraw');
+		
+
+
 
 
 
 $( document ).ready(function() {
+
 
 
 
