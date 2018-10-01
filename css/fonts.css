@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gc8lir');
+  src:  url('fonts/icomoon.eot?gc8lir#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gc8lir') format('truetype'),
+    url('fonts/icomoon.woff?gc8lir') format('woff'),
+    url('fonts/icomoon.svg?gc8lir#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-nico:before {
+  content: "\e909";
+}
+.icon-umi:before {
+  content: "\e90a";
+}
+.icon-maki:before {
+  content: "\e90b";
+}
+.icon-hanayo:before {
+  content: "\e90c";
+}
+.icon-kotori:before {
+  content: "\e90d";
+}
+.icon-honoka:before {
+  content: "\e90e";
+}
+.icon-nozomi:before {
+  content: "\e90f";
+}
+.icon-rin:before {
+  content: "\e910";
+}
+.icon-eli:before {
+  content: "\e911";
+}
+.icon-you:before {
+  content: "\e901";
+}
+.icon-yohane:before {
+  content: "\e902";
+}
+.icon-dia:before {
+  content: "\e903";
+}
+.icon-hanamaru:before {
+  content: "\e904";
+}
+.icon-riko:before {
+  content: "\e905";
+}
+.icon-ruby:before {
+  content: "\e906";
+}
+.icon-chika:before {
+  content: "\e907";
+}
+.icon-mari:before {
+  content: "\e908";
+}
+.icon-kanan:before {
+  content: "\e900";
+}
