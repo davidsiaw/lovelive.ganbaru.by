@@ -17,6 +17,8 @@
 
     <link href="../../../css/animate.css" rel="stylesheet">
     
+    <link href="../../../css/plugins/footable/footable.core.css" rel="stylesheet">
+
     <link href="../../../css/fonts.css" rel="stylesheet">
 
 
@@ -80,7 +82,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h2><span>Asahikawa Civic Culture Hall</span><span class="pull-right">2019/01/26</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
+			<h2><span>Hiroshima Bunka Gakuen HBG Hall (Session 2)</span><span class="pull-right">2019/01/13</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="30"><thead><th data-sort-value="number" onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'order'});">Order</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'title'});">Title</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'released'});">Released</th></thead><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Hop・Step・Wai！'});"><td>   1</td><td><sname is="Hop・Step・Wai！ (short ver.)" /><a href="/aqours/songs/73">Hop・Step・Wai！ (short ver.)</a></td><td>2018/06/30</td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Torikoriko PLEASE!!'});"><td>   2</td><td><sname is="Torikoriko PLEASE!! " /><a href="/aqours/songs/8">Torikoriko PLEASE!! </a></td><td>2016/05/25</td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Galaxy HidE and Seek'});"><td>   3</td><td><sname is="Galaxy HidE and Seek " /><a href="/aqours/songs/40">Galaxy HidE and Seek </a></td><td>2017/05/31</td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Todokanai Hoshi da to Shitemo'});"><td>   4</td><td><sname is="Todokanai Hoshi da to Shitemo " /><a href="/aqours/songs/5">Todokanai Hoshi da to Shitemo </a></td><td>2016/04/27</td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Tokimeki Bunruigaku'});"><td>   5</td><td><sname is="Tokimeki Bunruigaku " /><a href="/aqours/songs/9">Tokimeki Bunruigaku </a></td><td>2016/05/25</td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Yume Kataru yori Yume Utaou'});"><td>   6</td><td><sname is="Yume Kataru yori Yume Utaou " /><a href="/aqours/songs/16">Yume Kataru yori Yume Utaou </a></td><td>2016/08/24</td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Hop・Step・Wai！'});"><td>  E1</td><td><sname is="Hop・Step・Wai！ " /><a href="/aqours/songs/73">Hop・Step・Wai！ </a></td><td>2018/06/30</td></tr></table><ul class="pagination" /></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
 		</div>
 
 	</div>
@@ -107,6 +109,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</script>
     <script src="../../../js/MathJax/MathJax.js?config=AM_HTMLorMML-full" async></script>
 
+    <script src="../../../js/plugins/footable/footable.all.min.js"></script>
 
 
 
@@ -115,24 +118,35 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
     <script src='../../../js/plugins/pace/pace.min.js'></script>
 
     <script>
+		$('#table0').footable({
+			paging: {
+				size: 30
+			}
+		});
+		$('#table0').append(this.html).trigger('footable_redraw');
+		
+
+
 
 
 
 $( document ).ready(function() {
 
-							var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
-								142.3639726197085+
-								'%2C'+
-								43.7708005197085+
-								'%2C'+
-								142.3666705802915+
-								'%2C'+
-								43.7734984802915+
-								'&layer=mapnik&marker='+
-								43.7721495+
-								'%2C'+
-								142.3653216;
-							$('#themap').attr('src', url)
+
+
+								var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
+									132.4472434197085+
+									'%2C'+
+									34.38712251970851+
+									'%2C'+
+									132.4499413802915+
+									'%2C'+
+									34.3898204802915+
+									'&layer=mapnik&marker='+
+									34.3884715+
+									'%2C'+
+									132.4485924;
+								$('#themap').attr('src', url)
 
 
 			mixpanel.track("load_page", {name:"Aqours Club Activities Live & Fan Meeting 2018 Unit Tour", path:"aqours/events/85"});

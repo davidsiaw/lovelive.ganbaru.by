@@ -82,7 +82,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h2><span>TBS</span><span class="pull-right">2018/07/25</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="30"><thead><th data-sort-value="number" onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'order'});">Order</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'title'});">Title</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'released'});">Released</th></thead><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Kimi no Kokoro wa Kagayaiteru Kai?'});"><td>   1</td><td><sname is="Kimi no Kokoro wa Kagayaiteru Kai? (short ver.)" /><a href="/aqours/songs/0">Kimi no Kokoro wa Kagayaiteru Kai? (short ver.)</a></td><td>2015/10/07</td></tr></table><ul class="pagination" /></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
+			<h2><span>N/A</span><span class="pull-right">2018/07/25</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="30"><thead><th data-sort-value="number" onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'order'});">Order</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'title'});">Title</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'released'});">Released</th></thead><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Kimi no Kokoro wa Kagayaiteru Kai?'});"><td>   1</td><td><sname is="Kimi no Kokoro wa Kagayaiteru Kai? (short ver.)" /><a href="/aqours/songs/0">Kimi no Kokoro wa Kagayaiteru Kai? (short ver.)</a></td><td>2015/10/07</td></tr></table><ul class="pagination" /></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
 		</div>
 
 	</div>
@@ -134,19 +134,19 @@ $( document ).ready(function() {
 
 
 
-							var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
-								56.8847263+
-								'%2C'+
-								33.556031+
-								'%2C'+
-								56.9647263+
-								'%2C'+
-								33.636031+
-								'&layer=mapnik&marker='+
-								33.596031+
-								'%2C'+
-								56.9247263;
-							$('#themap').attr('src', url)
+								var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
+									4.8965356+
+									'%2C'+
+									51.5541489+
+									'%2C'+
+									4.9514385+
+									'%2C'+
+									51.5799106+
+									'&layer=mapnik&marker='+
+									51.56633915+
+									'%2C'+
+									4.92882476744184;
+								$('#themap').attr('src', url)
 
 
 			mixpanel.track("load_page", {name:"FNSうたの夏祭り (2018 Music Festival in Summer)", path:"aqours/events/60"});
