@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Love Live! Sunshine!! Unit Live Adventure 2020 ~CYaRon 1st Live~</title>
+    <title>Love Live! Festival</title>
 
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -57,7 +57,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 
 		            <div class="navbar-collapse collapse" id="navbar">
 		                <ul class="nav navbar-nav">
-<li ><a href="https://lovelive.ganbaru.by/"><span class="nav-label"><i class="fa fa-home"></i>Home</span></a></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>Aqours<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/aqours/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/aqours/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>µ's<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/muse/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/muse/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>Nijigasaki<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/nijigasaki/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/nijigasaki/events">Events</a></li></ul></li></li>
+<li ><a href="https://lovelive.ganbaru.by/"><span class="nav-label"><i class="fa fa-home"></i>Home</span></a></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>µ's<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/muse/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/muse/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>Aqours<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/aqours/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/aqours/events">Events</a></li></ul></li></li><li ><li class="dropdown"><a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-music"></i>Nijigasaki<span class="caret"></span></a><ul role="menu" class="dropdown-menu"><li ><a href="https://lovelive.ganbaru.by/nijigasaki/songs">Songs</a></li><li ><a href="https://lovelive.ganbaru.by/nijigasaki/events">Events</a></li></ul></li></li>
 		                </ul>
 		                <ul class="nav navbar-top-links navbar-right">
 
@@ -74,13 +74,13 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	            <div class="container">
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h1>Love Live! Sunshine!! Unit Live Adventure 2020 ~CYaRon 1st Live~</h1>
+			<h1>Love Live! Festival</h1>
 		</div>
 
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h2><span>West Japan General Exhibition Center</span><span class="pull-right">2020/02/22</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>No venue coordinates (yet).</h3></div></div>
+			<h2><span>Saitama Super Arena</span><span class="pull-right">2020/01/18</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
 		</div>
 
 	</div>
@@ -120,7 +120,22 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 
 $( document ).ready(function() {
 
-			mixpanel.track("load_page", {name:"Love Live! Sunshine!! Unit Live Adventure 2020 ~CYaRon 1st Live~", path:"aqours/events/123"});
+								var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
+									139.6296155+
+									'%2C'+
+									35.8936704+
+									'%2C'+
+									139.6323186+
+									'%2C'+
+									35.8962357+
+									'&layer=mapnik&marker='+
+									35.8951196+
+									'%2C'+
+									139.630753006184;
+								$('#themap').attr('src', url)
+
+
+			mixpanel.track("load_page", {name:"Love Live! Festival", path:"aqours/events/123"});
 
 
 
