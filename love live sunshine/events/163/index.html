@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Solitude Rain - Love Live Nijigasaki</title>
+    <title>Love Live! Sunshine!! Unit Live Adventure 2020 ~AZALEA 1st Live~ TRY AGAIN</title>
 
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -74,13 +74,13 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	            <div class="container">
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h1>Solitude Rain - Love Live Nijigasaki</h1>
+			<h1>Love Live! Sunshine!! Unit Live Adventure 2020 ~AZALEA 1st Live~ TRY AGAIN</h1>
 		</div>
 
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div>
+			<h2><span>Tokyo Dome</span><span class="pull-right">2021/02/28</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
 		</div>
 
 	</div>
@@ -120,7 +120,22 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 
 $( document ).ready(function() {
 
-			mixpanel.track("load_page", {name:"Solitude Rain - Love Live Nijigasaki", path:"love live nijigasaki/songs/51"});
+								var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
+									139.75078+
+									'%2C'+
+									35.704533+
+									'%2C'+
+									139.7531508+
+									'%2C'+
+									35.7064952+
+									'&layer=mapnik&marker='+
+									35.70557055+
+									'%2C'+
+									139.751970490708;
+								$('#themap').attr('src', url)
+
+
+			mixpanel.track("load_page", {name:"Love Live! Sunshine!! Unit Live Adventure 2020 ~AZALEA 1st Live~ TRY AGAIN", path:"love live sunshine/events/163"});
 
 
 

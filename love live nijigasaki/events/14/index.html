@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TV Anime Nijigasaki High School Idol Club Opening and Ending theme song release stage "Tokimeki Ranran Runrun Go!"</title>
+    <title>Anime Song Premium</title>
 
     <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -17,6 +17,8 @@
 
     <link href="../../../css/animate.css" rel="stylesheet">
     
+    <link href="../../../css/plugins/footable/footable.core.css" rel="stylesheet">
+
     <link href="../../../css/fonts.css" rel="stylesheet">
 
 
@@ -74,13 +76,13 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	            <div class="container">
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h1>TV Anime Nijigasaki High School Idol Club Opening and Ending theme song release stage "Tokimeki Ranran Runrun Go!"</h1>
+			<h1>Anime Song Premium</h1>
 		</div>
 
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<h2><span>Live Viewing</span><span class="pull-right">2020/12/26</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>No venue coordinates (yet).</h3></div></div>
+			<h2><span>NHK Studio</span><span class="pull-right">2020/11/22</span></h2><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="30"><thead><th data-sort-value="number" onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'order'});">Order</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'title'});">Title</th><th onclick="mixpanel.track('clicked_sort', {type: 'event_song', column: 'released'});">Released</th></thead><tr onclick="mixpanel.track('clicked_row', {type: 'event_song', title: 'Dream Land! Dream World!'});"><td>   1</td><td><sname is="Dream Land! Dream World! (short ver.)" /><a href="/love live nijigasaki/songs/22">Dream Land! Dream World! (short ver.)</a></td><td>2020/02/12</td></tr></table><ul class="pagination" /></div></div><div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><iframe id="themap" width="100%" height="600" frameborder="0" style="border:0" src=""></iframe></div></div>
 		</div>
 
 	</div>
@@ -107,6 +109,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</script>
     <script src="../../../js/MathJax/MathJax.js?config=AM_HTMLorMML-full" async></script>
 
+    <script src="../../../js/plugins/footable/footable.all.min.js"></script>
 
 
 
@@ -115,12 +118,38 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
     <script src='../../../js/plugins/pace/pace.min.js'></script>
 
     <script>
+		$('#table0').footable({
+			paging: {
+				size: 30
+			}
+		});
+		$('#table0').append(this.html).trigger('footable_redraw');
+		
+
+
 
 
 
 $( document ).ready(function() {
 
-			mixpanel.track("load_page", {name:"TV Anime Nijigasaki High School Idol Club Opening and Ending theme song release stage "Tokimeki Ranran Runrun Go!"", path:"love live nijigasaki/events/14"});
+
+
+								var url = 'https://www.openstreetmap.org/export/embed.html?bbox='+
+									138.1973406+
+									'%2C'+
+									36.6296661+
+									'%2C'+
+									138.1977747+
+									'%2C'+
+									36.6303334+
+									'&layer=mapnik&marker='+
+									36.6300131+
+									'%2C'+
+									138.197560134376;
+								$('#themap').attr('src', url)
+
+
+			mixpanel.track("load_page", {name:"Anime Song Premium", path:"love live nijigasaki/events/14"});
 
 
 
