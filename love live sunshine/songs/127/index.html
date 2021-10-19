@@ -17,6 +17,8 @@
 
     <link href="../../../css/animate.css" rel="stylesheet">
     
+    <link href="../../../css/plugins/footable/footable.core.css" rel="stylesheet">
+
     <link href="../../../css/fonts.css" rel="stylesheet">
 
 
@@ -80,7 +82,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div>
+			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="30"><thead><th data-sort-value="number" onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'number'});">Performance No.</th><th onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'date_performed'});">Date Performed</th><th onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'event'});">Event</th><th onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'venue'});">Venue</th></thead><tr onclick="mixpanel.track('clicked_row', {type: 'song_event', title: 'CYaRon! 2nd LoveLive! ～Daikakumei☆Wake Up Kingdom～'});"><td>   1</td><td><sname is="2021/10/16" /><a href="/love live sunshine/events/175">2021/10/16</a></td><td><sname is="CYaRon! 2nd LoveLive! ～Daikakumei☆Wake Up Kingdom～" /><a href="/love live sunshine/events/175">CYaRon! 2nd LoveLive! ～Daikakumei☆Wake Up Kingdom～</a></td><td><sname is="Makuhari Messe International Exhibition Hall" /><a href="/love live sunshine/events/175">Makuhari Messe International Exhibition Hall</a></td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'song_event', title: 'CYaRon! 2nd LoveLive! ～Daikakumei☆Wake Up Kingdom～'});"><td>   2</td><td><sname is="2021/10/17" /><a href="/love live sunshine/events/176">2021/10/17</a></td><td><sname is="CYaRon! 2nd LoveLive! ～Daikakumei☆Wake Up Kingdom～" /><a href="/love live sunshine/events/176">CYaRon! 2nd LoveLive! ～Daikakumei☆Wake Up Kingdom～</a></td><td><sname is="Makuhari Messe International Exhibition Hall" /><a href="/love live sunshine/events/176">Makuhari Messe International Exhibition Hall</a></td></tr></table><ul class="pagination" /></div></div>
 		</div>
 
 	</div>
@@ -107,6 +109,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</script>
     <script src="../../../js/MathJax/MathJax.js?config=AM_HTMLorMML-full" async></script>
 
+    <script src="../../../js/plugins/footable/footable.all.min.js"></script>
 
 
 
@@ -115,10 +118,21 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
     <script src='../../../js/plugins/pace/pace.min.js'></script>
 
     <script>
+		$('#table0').footable({
+			paging: {
+				size: 30
+			}
+		});
+		$('#table0').append(this.html).trigger('footable_redraw');
+		
+
+
 
 
 
 $( document ).ready(function() {
+
+
 
 			mixpanel.track("load_page", {name:"Dragon Riders - Love Live Sunshine", path:"love live sunshine/songs/127"});
 
