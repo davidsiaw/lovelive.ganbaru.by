@@ -17,6 +17,8 @@
 
     <link href="../../../css/animate.css" rel="stylesheet">
     
+    <link href="../../../css/plugins/footable/footable.core.css" rel="stylesheet">
+
     <link href="../../../css/fonts.css" rel="stylesheet">
 
 
@@ -80,7 +82,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</div>
 	<div class="row " style="">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><h3>Not performed yet</h3></div></div>
+			<div class="ibox float-e-margins"><div class="ibox-content" style="min-height: px"><table class="table table-hover toggle-arrow-tiny" id="table0" style="" data-filtering="true" data-sorting="true" data-paging="true" data-show-toggle="true" data-toggle-column="last" data-paging-size="30"><thead><th data-sort-value="number" onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'number'});">Performance No.</th><th onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'date_performed'});">Date Performed</th><th onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'event'});">Event</th><th onclick="mixpanel.track('clicked_sort', {type: 'song_event', column: 'venue'});">Venue</th></thead><tr onclick="mixpanel.track('clicked_row', {type: 'song_event', title: 'LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～'});"><td>   1</td><td><sname is="2021/11/14" /><a href="/love live superstar/events/12">2021/11/14</a></td><td><sname is="LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～" /><a href="/love live superstar/events/12">LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～</a></td><td><sname is="Manamiru Iwamizawa City Hall Large Hall" /><a href="/love live superstar/events/12">Manamiru Iwamizawa City Hall Large Hall</a></td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'song_event', title: 'LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～'});"><td>   2</td><td><sname is="2021/11/15" /><a href="/love live superstar/events/13">2021/11/15</a></td><td><sname is="LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～" /><a href="/love live superstar/events/13">LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～</a></td><td><sname is="Manamiru Iwamizawa City Hall Large Hall" /><a href="/love live superstar/events/13">Manamiru Iwamizawa City Hall Large Hall</a></td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'song_event', title: 'LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～'});"><td>   3</td><td><sname is="2021/12/04" /><a href="/love live superstar/events/18">2021/12/04</a></td><td><sname is="LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～" /><a href="/love live superstar/events/18">LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～</a></td><td><sname is="Kitakyushu Soleil Hall" /><a href="/love live superstar/events/18">Kitakyushu Soleil Hall</a></td></tr><tr onclick="mixpanel.track('clicked_row', {type: 'song_event', title: 'LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～'});"><td>   4</td><td><sname is="2021/12/12" /><a href="/love live superstar/events/22">2021/12/12</a></td><td><sname is="LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～" /><a href="/love live superstar/events/22">LoveLive! Superstar!! Liella! First LoveLive! Tour ～Starlines～</a></td><td><sname is="NTK Hall Forest Hall" /><a href="/love live superstar/events/22">NTK Hall Forest Hall</a></td></tr></table><ul class="pagination" /></div></div>
 		</div>
 
 	</div>
@@ -107,6 +109,7 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
 	</script>
     <script src="../../../js/MathJax/MathJax.js?config=AM_HTMLorMML-full" async></script>
 
+    <script src="../../../js/plugins/footable/footable.all.min.js"></script>
 
 
 
@@ -115,10 +118,21 @@ mixpanel.init("a1a990e9a4a668ec0c97f731442f51cc");</script><!-- end Mixpanel -->
     <script src='../../../js/plugins/pace/pace.min.js'></script>
 
     <script>
+		$('#table0').footable({
+			paging: {
+				size: 30
+			}
+		});
+		$('#table0').append(this.html).trigger('footable_redraw');
+		
+
+
 
 
 
 $( document ).ready(function() {
+
+
 
 			mixpanel.track("load_page", {name:"Anniversary (Hazuki Ren ver.) - Love Live Superstar", path:"love live superstar/songs/26"});
 
